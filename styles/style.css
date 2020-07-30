@@ -1,7 +1,8 @@
 /************************ Common Css - Start ***********************/
-p,h1,h2,h3,h4,h5,h6,span,a{
+body,p,h1,h2,h3,h4,h5,h6,span,a{
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
 }
 .p-0{
 	padding: 0px;
@@ -11,6 +12,9 @@ a:hover{
 }
 select:focus,input:focus{
 	outline: none;
+}
+.m-t-20{
+	margin-top: 20px;
 }
 /************************ Common Css - End ***********************/
 .main_header{
@@ -78,7 +82,7 @@ select:focus,input:focus{
 #main .maincontent{
 	width: calc(100% - 125px);
     margin-left: 125px;
-    padding: 0px 0px 50px;
+    padding: 0px 0px 0px;
 }
 #main .maincontent .tabs-Div .nav-tabs>li a{
 	border: none;
@@ -116,15 +120,17 @@ select:focus,input:focus{
 #main .maincontent #card .tabs-content #activity p{
 	color: #babfc5;
 }
-#main .maincontent #card .tabs-content #activity h4{
+#main .maincontent #card .tabs-content #activity h4,#operation .tableDiv h4,#operation .activity-target h4,#operation .optimal-div h4 {
 	font-size: 22px;
     margin-top: 5px;
+    color: #224c5b;
+    font-weight: 500;
 }
 #main .maincontent #card .tabs-content #activity .selectDiv{
     margin-top: 20px;
     display: flex;
 }
-#main .maincontent #card .tabs-content #activity .selectDiv .departmentSelect label,#main .maincontent #card .tabs-content #activity .selectDiv .assignBySelect label{
+#main .maincontent #card .tabs-content #activity .selectDiv .departmentSelect label,#main .maincontent #card .tabs-content #activity .selectDiv .assignBySelect label,#operation .multiple-select-options .selectDiv label{
 	width: 100%;
 	font-weight: 100;
 	color: #babfc5;
@@ -161,7 +167,7 @@ select:focus,input:focus{
     margin-bottom: 10px;
     border: none;
 }
-#main .maincontent #card .tabs-content .create-new-activity .editActivity{
+#main .maincontent #card .tabs-content .create-new-activity .editActivityText{
     padding: 10px 20px;
     color: #838e98;
     border-radius: 5px;
@@ -180,11 +186,14 @@ select:focus,input:focus{
     max-width: 60%;
     margin-top: 20px;
 }
-#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv thead{
+#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv thead,#operation .tableDiv thead{
 	background-color: #c0ebeb;
 }
 #main .maincontent #card .tabs-content .assignActivityDiv .tableDiv thead tr th,#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv table,#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv table tbody tr td{
 	border: none;
+}
+#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv table{
+	margin-bottom: 0px;
 }
 #assignActivity tr td {
     background-color: #fff;
@@ -223,16 +232,22 @@ select:focus,input:focus{
 	color: #56caca;
 	cursor: pointer;
 }
-#finishButtonDiv{
+#finish-exsisting-location,#operation .tableDiv{
+	margin-top: 50px;
+}
+#finishButtonDiv,#finishLoanButtonDiv,#finishTableButtonDiv,#finishTargetButtonDiv,#finishOptimalButtonDiv{
 	width: 100%;
     max-width: 40%;
     margin-top: 50px;
     display: none;
 }
-#finishButtonDiv p{
+#finishAllocationButtonDiv,#finish-exsisting-location{
+display: none;
+}
+#finishButtonDiv p,#finishLoanButtonDiv p{
 	text-align: center;
 } 
-#finishButtonDiv p .finishBtn{
+#finishButtonDiv p .finishBtn,#finishLoanButtonDiv p .finishBtn,#finishAllocationButtonDiv p .finishBtn,#finish-exsisting-location p .finishBtn,#finishTableButtonDiv p .finishBtn,#finishTargetButtonDiv p .finishBtn,#finishOptimalButtonDiv p .finishBtn{
 	background: #ffa189;
     padding: 7px 30px;
     color: #1a4862;
@@ -241,9 +256,310 @@ select:focus,input:focus{
     cursor: pointer;
     font-weight: 600;
 }
-#finishButtonDiv p .cancleBtn{
+#finishButtonDiv p .cancleBtn,#finishLoanButtonDiv p .cancleBtn,#finishAllocationButtonDiv p .cancleBtn,#finish-exsisting-location p .cancleBtn,#finishTableButtonDiv p .cancleBtn,#finishTargetButtonDiv p .cancleBtn,#finishOptimalButtonDiv p .cancleBtn{
 	color: #1a4862;
 	font-size: 15px;
 	cursor: pointer;
 	font-weight: 600;
+}
+.totalDiv{
+	background: #2a3a4b;
+    padding: 10px 5px;
+    max-width: 96%;
+    margin-bottom: 20px;
+    display: none;
+}
+.totalDiv p{
+	color: #Fff !important;
+    font-size: 10px;
+}
+.totalDiv p strong{
+	font-size: 15px;
+}
+.totalDiv .timeParaText{
+	font-size: 15px;
+    padding: 0px 60px;
+}
+.totalDiv .percentageText{
+	font-size: 15px;
+}
+.tableDiv{
+	position: relative;
+}
+.tableDiv .menuDiv{
+	position: absolute;
+    top: 51px;
+    right: -115px;
+    display: none;
+}
+.tableDiv .menuDiv ul{
+	list-style: none;
+    background: #fff;
+    padding: 10px 15px 0px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.tableDiv .menuDiv ul li{
+	font-size: 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.tableDiv .menuDiv ul li:nth-child(1){
+	border-bottom: 1px solid;
+}
+#deleteModal .modal-dialog{
+	margin-top: 150px;
+}
+#deleteModal .modal-content{
+	border-radius: 0px;
+	border: 1px solid #01b1b1;
+}
+#deleteModal .modal-header{
+	border: none;
+}
+#deleteModal .modal-title{
+	font-weight: 600;
+    color: #2a3a4b;
+}
+#deleteModal p{
+	margin-top: 20px;
+    font-size: 18px;
+    color: #2a3a4b !important;
+}
+#deleteModal .modal-body{
+	padding: 29px 35px 50px;
+}
+#deleteModal .close {
+    float: right;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    filter: alpha(opacity=20);
+     opacity: 2; 
+}
+#deleteModal .modal-footer{
+	text-align: initial;
+}
+#deleteModal .buttonDiv{
+	margin-top: 45px;
+}
+#deleteModal .buttonDiv .finishButtonDiv a{
+	background: #ffb5a3;
+    padding: 13px 30px;
+    border-radius: 3px;
+    color: #2a3a4b;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+}
+.cancelDelete{
+	background-color: transparent !important;
+	cursor: pointer;
+}
+.editActivity,.newActivity{
+	background-color: #f5f8fa;
+    display: none;
+}
+.editActivity h4,.newActivity h4{
+	font-weight: 700;
+    font-size: 22px;
+    color: #1a4862;
+}
+.editActivity .drop-down-div{
+	margin-top: 40px;
+}
+.editActivity .drop-down-div label{
+	font-size: 20px;
+    font-weight: 500;
+}
+.editActivity .drop-down-div select,.editActivity .drop-down-div .custom-field input{
+	margin-top: 10px;
+	border: navajowhite;
+    width: 250px;
+    padding: 10px 10px;
+	-webkit-box-shadow: 0 4px 2px -2px #ccc;
+	-moz-box-shadow: 0 4px 2px -2px #ccc;
+	box-shadow: 0px 3px 8px #ccc;
+	border-radius: 5px;
+}
+.editActivity .multi-Drop-Down{
+	width: 100%;
+    max-width: 70%;
+}
+.editActivity .drop-down-div .addAllocationText,.form-Div .addAllocationText{
+    padding: 0px 20px 0px 0px;
+    margin-top: 30px;
+    font-weight: 700;
+    color: #1a4862 !important;
+    font-size: 15px;
+    cursor: pointer;
+}
+.editActivity .drop-down-div .removeText,.removeText{
+	padding: 0px 20px;
+    color: #1a4862;
+    font-weight: 600;
+    cursor: pointer;
+}
+.editActivity .drop-down-div .addAllocationDiv .custom-select{
+	margin-bottom: 15px;
+}
+.editActivity .drop-down-div p{
+	font-size: 14px;
+    font-weight: 600;
+    color: darkgrey;
+    margin: 20px 0px;
+}
+.create-activity-form-div,#operation .activity-target,#operation .optimal-div{
+	margin-top: 40px;
+}
+.create-activity-form-div h5{
+	font-size: 20px;
+    color: #1a4862
+}
+.create-activity-form-div .same-text-label{
+	font-size: 13px;
+    font-weight: 600;
+    color: darkgrey;
+}
+.create-activity-form-div .form-Div{
+	margin-top: 20px;
+}
+.input-form,.select-form{
+	margin-top: 10px;
+    border: navajowhite;
+    width: 250px;
+    padding: 10px 10px;
+    -webkit-box-shadow: 0 4px 2px -2px #ccc;
+    -moz-box-shadow: 0 4px 2px -2px #ccc;
+    box-shadow: 0px 3px 8px #ccc;
+    border-radius: 5px;
+}
+.create-activity-form-div .form-Div .select-division-departmet,.create-activity-form-div .form-Div .allocate-activity-div{
+	margin-top: 60px;
+	width: 100%;
+    max-width: 70%;
+}
+.select-division-departmet span{
+	margin-left: 20px;
+    font-size: 25px;
+    color: #224c5b;
+}
+.multiple-select-options{
+	width: 100%;
+	max-width: 50%;
+}
+.multiple-select-options .selectDiv select{
+	padding: 11px 10px;
+    border-color: #bceaea;
+    width: 100%;
+}
+#operation .tableDiv thead tr td{
+	padding-left: 25px;
+	font-weight: 600;
+    font-size: 16px;
+    color: #224c7f;
+}
+#operation .tableDiv tbody tr td{
+	padding-left: 25px;
+	font-weight: 600;
+    font-size: 14px;
+    color: #224c7f;
+}
+#operation .tableDiv table{
+	margin-top: 30px;
+	width: 100%;
+    max-width: 90%;
+}
+#operation .tableDiv table thead tr td{
+	padding: 14px 10px 14px 25px !important;
+}
+#operation .tableDiv table tbody tr td:first-child{
+	text-align: left;
+}
+#operation .tableDiv table tbody tr td{
+	background-color: #fff;
+	padding: 26px 25px 22px 25px !important;
+    text-align: center;
+}
+#operation .tableDiv table thead tr td:last-child,#operation .tableDiv table tbody tr td:last-child{
+	background-color: #224c5b;
+    color: #fff;
+}
+.input-percentage{
+	position: relative;
+}
+.input-percentage .plus-minus-text{
+	position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 25px;
+    color: #224c5b;
+}
+.input-percentage input{
+	width: 100%;
+    max-width: 16%;
+    margin-top: 20px;
+    color: #224c5b;
+}
+.optimal-div .multi-input input{
+	width: 100%;
+	max-width: 100%;
+	margin-top: 5px;
+}
+.optimal-div .multi-input .input-percentage .plus-minus-text{
+	top: 6px;
+}
+.optimal-div .multi-input {
+	width: 100%;
+    max-width: 34%;
+}
+.optimal-div .multi-input label{
+	padding-top: 25px;
+	color: darkgray;
+}
+/************** Media-Query ************/
+@media only screen and (max-width: 1200px) {
+.main_header {
+    position: fixed;
+    top: 0;
+  }
+#main .maincontent .mainContent {
+    margin-top: 112px;
+}
+#main .maincontent #card .tabs-content {
+    padding: 30px 20px;
+}
+#main .maincontent #card .tabs-content .create-new-activity {
+    text-align: right;
+}
+#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
+	max-width: 90%;
+}
+}
+
+@media only screen and (max-width: 992px) {
+.sideNav .siteName h4 {
+    font-size: 25px;
+    padding: 23px 11px;
+	}
+.main_header p {
+    padding: 27px;
+    font-size: 15px;
+	}
+.main_header .loginText {
+    padding: 27px;
+    text-align: right;
+    font-size: 15px;
+	}
+}
+@media only screen and (max-width: 768px) {
+.main_header p {
+    padding: 32px 0px;
+    font-size: 12px;
+}
+.main_header .loginText {
+    padding: 33px 0px;
+    font-size: 12px;
+}
 }
