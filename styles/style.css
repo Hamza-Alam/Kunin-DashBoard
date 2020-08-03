@@ -610,7 +610,7 @@ display: none;
     padding: 10px 10px;
     color: #224c5b;
 }
-.table-div-activity .table>tbody>tr>td:nth-child(3),.table-div-activity .table>tbody>tr>td:nth-child(4),.table-div-activity .table>tbody>tr>td:nth-child(5),.table-div-activity .table>tbody>tr>td:nth-child(6),.table-div-activity .table>tbody>tr>td:nth-child(7),.table-div-activity .table>tbody>tr>td:nth-child(8),.table-div-activity .table>tbody>tr>td:nth-child(9){
+#cerdit-card table tbody>tr>td:nth-child(4),#cerdit-card table tbody>tr>td:nth-child(3),.table-div-activity .table>tbody>tr>td:nth-child(3),.table-div-activity .table>tbody>tr>td:nth-child(4),.table-div-activity .table>tbody>tr>td:nth-child(5),.table-div-activity .table>tbody>tr>td:nth-child(6),.table-div-activity .table>tbody>tr>td:nth-child(7),.table-div-activity .table>tbody>tr>td:nth-child(8),.table-div-activity .table>tbody>tr>td:nth-child(9){
 	text-align: center;
 }
 .table-performance-overview .table>thead{
@@ -670,6 +670,138 @@ display: none;
 	margin-bottom: 5px;
 	font-size: 12px;
 	color: #767F89;
+}
+#cerdit-card table thead>tr>th{
+	padding: 5px 15px !important;
+    vertical-align: middle !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2A3A4B;
+}
+#cerdit-card table thead>tr>th:nth-child(1){
+	width: 18%;
+}
+#cerdit-card table thead>tr>th:nth-child(2){
+	width: 9%;
+	text-align: center;
+}
+#cerdit-card table thead>tr>th:nth-child(3),#cerdit-card table thead>tr>th:nth-child(4){
+	width: 8%;
+}
+#cerdit-card table thead>tr>th:nth-child(5),#cerdit-card table thead>tr>th:nth-child(6){
+	width: 11%;
+}
+#cerdit-card table tbody tr>td {
+    padding: 15px !important;
+}
+#cerdit-card table tbody tr>td:nth-child(10),#cerdit-card table tbody tr>td:nth-child(11),
+#cerdit-card table tbody tr>td:nth-child(12),#cerdit-card table tbody tr>td:nth-child(13),
+#cerdit-card table tbody tr>td:nth-child(14),#cerdit-card table tbody tr>td:nth-child(15){
+	position: relative;
+}
+#cerdit-card tfoot{
+	background: #2A3A4B;
+    color: #fff;
+}
+#cerdit-card tfoot tr>td{
+	padding: 17px 10px !important;
+}
+.parent-bar{
+	width: 324px;
+    height: 75%;
+    background: #E6E6E6;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    border-radius: 5px 5px 5px 5px;
+}
+.child-bar{
+	width: 98%;
+    background: #F67756;
+    height: 75%;
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    border-radius: 5px 5px 5px 5px;
+}
+.bar-200{
+	width: 200px;
+}
+.bar-335{
+	width: 335px;
+}
+.bar-192{
+	width: 192px;
+}
+.bar-255{
+	width: 255px;
+}
+.bar-60{
+	width: 100%;
+    max-width: 60%;
+    left: 14px;
+}
+.bar-30{
+	width: 100%;
+    max-width: 30%;
+    left: 0px;
+}
+.left-25{
+	left: 25px;
+}
+.bar-130{
+	width: 130px;
+}
+.bar-right-20{
+	max-width: 20%;
+    right: 0;
+    left: auto;
+}
+.bar-30-left-26{
+	width: 30%;
+	left: 26px;
+}
+.bar-30-left-40{
+	width: 100%;
+    max-width: 30%;
+    left: 40px;
+}
+.left-15{
+	left: 15px;
+}
+.bar-right{
+	right: 0;
+    left: initial;
+    width: 100%;
+    max-width: 30%;
+}
+.bar-70-left-39{
+	width: 100%;
+    left: 39px;
+    max-width: 70%;
+}
+.bar-15{
+	width: 100%;
+    max-width: 15%;
+}
+.employee-Table{
+	display: none;
+}
+#cerdit-card table{
+	background-color: #ffffff;
+}
+#cerdit-card .employee-Table table thead>tr>th:nth-child(1){
+	width: 14%;
+}
+#cerdit-card .employee-Table table thead>tr>th{
+	padding: 15px !important;
+}
+#cerdit-card .employee-Table table thead>tr>th:nth-child(3), #cerdit-card .employee-Table table thead>tr>th:nth-child(4){
+	width: 11%;
+}
+#cerdit-card .employee-Table table thead>tr>th:nth-child(5), #cerdit-card .employee-Table table thead>tr>th:nth-child(6){
+	width: 10%;
 }
 /************** Media-Query ************/
 @media only screen and (max-width: 1200px) {

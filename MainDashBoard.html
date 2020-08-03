@@ -338,8 +338,9 @@
                           <div class="row">
                             <div class="col-lg-6">
                               <label class="w-100">Display View By:</label>
-                              <select>
+                              <select class="display-view-by">
                                 <option>Activity</option>
+                                <option>All Employee</option>
                               </select>
                             </div>
                             <div class="col-lg-6">
@@ -348,84 +349,354 @@
                             </div>
                           </div>
                         </div>
-                        <div class="table-card-div">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <table class="table table-bordered">
-                                      <thead>
-                                        <tr>
-                                          <th>Activity</th>
-                                          <th>Trend</th>
-                                          <th>Average hrs per Employee</th>
-                                          <th>Employee this Period</th>
-                                          <th colspan="2">Assigned Time</th>
-                                          <th colspan="2">Achieved Time</th>
-                                          <th>High Focus (Time of Day)</th>
-                                          <th>07:00</th>
-                                          <th>08:00</th>
-                                          <th>09:00</th>
-                                          <th>10:00</th>
-                                          <th>11:00</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>Application Processing</td>
-                                          <td></td>
-                                          <td>6 h</td>
-                                          <td>32</td>
-                                          <td>192 h</td>
-                                          <td>86%</td>
-                                          <td class="achrived-target">185 h</td>
-                                          <td class="achrived-target">96%</td>
-                                          <td>10:00 - 12:00</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Customer Service</td>
-                                          <td></td>
-                                          <td>6 h</td>
-                                          <td>40</td>
-                                          <td>240 h</td>
-                                          <td>86%</td>
-                                          <td class="achrived-target">240 h</td>
-                                          <td class="achrived-target">100%</td>
-                                          <td>9:00 - 10:00</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Account Maintance</td>
-                                          <td></td>
-                                          <td>4 h</td>
-                                          <td>15</td>
-                                          <td>60 h</td>
-                                          <td>57%</td>
-                                          <td class="below-target">32 h</td>
-                                          <td class="below-target">53%</td>
-                                          <td>10:00 - 12:00</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Last and Stolen Cards</td>
-                                          <td></td>
-                                          <td>5 h</td>
-                                          <td>24</td>
-                                          <td>120 h</td>
-                                          <td>71%</td>
-                                          <td class="exceed-target">150 h</td>
-                                          <td class="exceed-target">125%</td>
-                                          <td>10:00 - 12:00</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Fraud</td>
-                                          <td></td>
-                                          <td>5 h</td>
-                                          <td>8</td>
-                                          <td>40 h</td>
-                                          <td>71%</td>
-                                          <td class="achrived-target">40 h</td>
-                                          <td class="achrived-target">100%</td>
-                                          <td>10:00 - 12:00</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                        <div class="activity-Table">
+                          <div class="table-card-div">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th>Activity</th>
+                                            <th>Trend</th>
+                                            <th>Average hrs per Employee</th>
+                                            <th>Employee this Period</th>
+                                            <th colspan="2">Assigned Time</th>
+                                            <th colspan="2">Achieved Time</th>
+                                            <th>High Focus (Time of Day)</th>
+                                            <th>07:00</th>
+                                            <th>08:00</th>
+                                            <th>09:00</th>
+                                            <th>10:00</th>
+                                            <th>11:00</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Application Processing</td>
+                                            <td></td>
+                                            <td>6 h</td>
+                                            <td>32</td>
+                                            <td>192 h</td>
+                                            <td>86%</td>
+                                            <td class="achrived-target">185 h</td>
+                                            <td class="achrived-target">96%</td>
+                                            <td>10:00 - 12:00</td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar"></div>
+                                                  <div class="child-bar"></div>
+                                                </div>
+                                              </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Customer Service</td>
+                                            <td></td>
+                                            <td>6 h</td>
+                                            <td>40</td>
+                                            <td>240 h</td>
+                                            <td>86%</td>
+                                            <td class="achrived-target">240 h</td>
+                                            <td class="achrived-target">100%</td>
+                                            <td>9:00 - 10:00</td>
+                                            <td></td>
+                                            <td>
+                                              <div class="bar">
+                                                <div class="parent-bar bar-255"></div>
+                                                <div class="child-bar bar-200"></div>
+                                              </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Last and Stolen Cards</td>
+                                            <td></td>
+                                            <td>5 h</td>
+                                            <td>24</td>
+                                            <td>120 h</td>
+                                            <td>71%</td>
+                                            <td class="exceed-target">150 h</td>
+                                            <td class="exceed-target">125%</td>
+                                            <td>10:00 - 12:00</td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar"></div>
+                                                  <div class="child-bar bar-335"></div>
+                                                </div>
+                                              </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Account Maintance</td>
+                                            <td></td>
+                                            <td>4 h</td>
+                                            <td>15</td>
+                                            <td>60 h</td>
+                                            <td>57%</td>
+                                            <td class="below-target">32 h</td>
+                                            <td class="below-target">53%</td>
+                                            <td>10:00 - 12:00</td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar"></div>
+                                                </div>
+                                              </td>
+                                            <td></td>
+                                            <td>
+                                              <div class="child-bar"></div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fraud</td>
+                                            <td></td>
+                                            <td>5 h</td>
+                                            <td>8</td>
+                                            <td>40 h</td>
+                                            <td>71%</td>
+                                            <td class="achrived-target">40 h</td>
+                                            <td class="achrived-target">100%</td>
+                                            <td>10:00 - 12:00</td>
+                                              <td>
+                                                
+                                              </td>
+                                            <td></td>
+                                            <td>
+                                              <div class="bar">
+                                                  <div class="parent-bar bar-192"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                              <div class="child-bar"></div>
+                                            </td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Facebook.com</td>
+                                            <td></td>
+                                            <td>5 h</td>
+                                            <td>8</td>
+                                            <td>40 h</td>
+                                            <td>71%</td>
+                                            <td class="exceed-target">40 h</td>
+                                            <td class="exceed-target">100%</td>
+                                            <td>10:00 - 12:00</td>
+                                              <td>
+                                                
+                                              </td>
+                                            <td></td>
+                                            <td>
+                                              <div class="bar">
+                                                  <div class="parent-bar bar-192"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                              
+                                            </td>
+                                            <td>
+                                              <div class="child-bar"></div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Torontostar.com</td>
+                                            <td></td>
+                                            <td>5 h</td>
+                                            <td>8</td>
+                                            <td>40 h</td>
+                                            <td>71%</td>
+                                            <td class="exceed-target">40 h</td>
+                                            <td class="exceed-target">100%</td>
+                                            <td>10:00 - 12:00</td>
+                                            <div class="bar-Div">
+                                              <td>
+                                              </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar bar-192"></div>
+                                                  <div class="child-bar"></div>
+                                                </div></td>
+                                              <td></td>
+                                              <td></td>
+                                            </div>
+                                          </tr>
+                                        </tbody>
+                                        <div class="footer">
+                                        <tfoot>
+                                          <tr>
+                                            <td colspan="3">Totals (Aggregate)</td>
+                                            <td class="text-center">227</td>
+                                            <td class="text-center">652</td>
+                                            <td></td>
+                                            <td>4,007 h</td>
+                                            <td colspan="7"></td>
+                                          </tr>
+                                        </tfoot>
+                                        </div>
+                                      </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="employee-Table">
+                          <div class="table-card-div">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th>All Employee</th>
+                                            <th>Trend</th>
+                                            <th colspan="2">Assigned Time</th>
+                                            <th colspan="2">Achieved Time</th>
+                                            <th>High Focus (Time of Day)</th>
+                                            <th>High Focus (Duration)</th>
+                                            <th>Collective Focus Time</th>
+                                            <th>07:00</th>
+                                            <th>08:00</th>
+                                            <th>09:00</th>
+                                            <th>10:00</th>
+                                            <th>11:00</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Mary Ellen Black</td>
+                                            <td></td>
+                                            <td>6 h</td>
+                                            <td>32</td>
+                                            <td class="exceed-target">192 h</td>
+                                            <td class="exceed-target">86%</td>
+                                            <td>07:00 - 08:00</td>
+                                            <td class="text-center">1h</td>
+                                            <td class="text-center">5 h 30 m</td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar"></div>
+                                                  <div class="child-bar"></div>
+                                                </div>
+                                              </td>
+                                            <td>
+                                              <div class="child-bar bar-60"></div>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                              <div class="child-bar bar-30"></div>
+                                            <div class="child-bar bar-30-left-26"></div>
+                                            <div class="child-bar bar-right-20"></div></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Erin Cowell</td>
+                                            <td></td>
+                                            <td>6 h</td>
+                                            <td>40</td>
+                                            <td class="below-target">240 h</td>
+                                            <td class="below-target">86%</td>
+                                            <td></td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Lisa Pinkett</td>
+                                            <td></td>
+                                            <td>5 h</td>
+                                            <td>24</td>
+                                            <td class="below-target">120 h</td>
+                                            <td class="below-target">71%</td>
+                                            <td></td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Bob Smith</td>
+                                            <td></td>
+                                            <td>4 h</td>
+                                            <td>15</td>
+                                            <td class="achrived-target">60 h</td>
+                                            <td class="achrived-target">57%</td>
+                                            <td>07:00 - 08:00</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">5 h 30 m</td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar"></div>
+                                                  <div class="child-bar bar-130"></div>
+                                                </div>
+                                              </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                              <div class="child-bar bar-30"></div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Bud Star</td>
+                                            <td></td>
+                                            <td>5 h</td>
+                                            <td>8</td>
+                                            <td class="achrived-target">40 h</td>
+                                            <td class="achrived-target">71%</td>
+                                            <td>07:00 - 08:00</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3 h</td>
+                                            <td>
+                                              <div class="bar">
+                                                <div class="parent-bar"></div>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="child-bar left-25"></div>
+                                            </td>
+                                            <td>
+                                               <div class="child-bar bar-30-left-40"></div>
+                                            </td>
+                                            <td>
+                                              <div class="child-bar bar-15"></div>
+                                              <div class="child-bar bar-15 left-15"></div>
+                                              <div class="child-bar bar-70-left-39"></div>
+                                            </td>
+                                            <td>
+                                              <div class="child-bar bar-right"></div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                        <div class="footer">
+                                        <tfoot>
+                                          <tr>
+                                            <td colspan="2">Totals (Aggregate)</td>
+                                            <td class="text-center">22 h</td>
+                                            <td></td>
+                                            <td class="text-center">17 h</td>
+                                            <td colspan="2"></td>
+                                            <td class="text-center">5 h</td>
+                                            <td class="text-center">14 h</td>
+                                            <td colspan="7"></td>
+                                          </tr>
+                                        </tfoot>
+                                        </div>
+                                      </table>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1130,6 +1401,16 @@
         $('.table-performance-overview .table>thead>tr>th:nth-child(3)').css('width','21%');
         $('.table-performance-overview .table>thead>tr>th').css('vertical-align','middle');
       });
+      $('.display-view-by').change(function () {
+          var end = this.value;
+          if(end=="Activity"){
+            $('.activity-Table').css('display','block');
+            $('.employee-Table').css('display','none');
+          }
+          else if(end=="All Employee"){
+            $('.activity-Table').css('display','none');
+            $('.employee-Table').css('display','block');
+          }
+      });
    </script>
-   }
 </html>
