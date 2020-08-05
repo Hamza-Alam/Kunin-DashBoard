@@ -27,11 +27,13 @@
                   <div class="main_header">
                      <div class="container-fluid">
                         <div class="row">
-                           <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                           <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
                               <p>Set up and Administration: Credit Cards</p>
                            </div>
-                           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                           <div class="user-profile-name">
+                           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                               <p class="loginText"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Harold james</p>
+                           </div>
                            </div>
                         </div>
                      </div>
@@ -41,7 +43,7 @@
                         <div class="introDiv">
                           <div class="container-fluid p-0">
                             <div class="row">
-                              <div class="col-lg-4">
+                              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <h4>Hi Harold,</h4>
                                 <div class="dateSelect">
                                   <label>Select Date Range</label>
@@ -49,10 +51,10 @@
                                 </div>
                               </div>
                               <div class="img-div">
-                              <div class="col-lg-8">
+                              <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
                                 <h4>My Focus Area's: <span class="achieved-text">(Achieved Time)</span></h4>
                                 <div class="progress-image-div">
-                                  <img src="./img/Progress-div.PNG">
+                                  <img class="img-responsive" src="./img/Progress-div.PNG">
                                 </div>
                               </div>
                               </div>
@@ -70,9 +72,11 @@
                               <div class="table-div-activity">
                                 <div class="row">
                                   <div class="col-lg-12">
+                                    <div class="table-responsive">
                                     <table class="table table-bordered">
                                       <thead>
                                         <tr>
+                                          
                                           <th>Assigned Activity</th>
                                           <th>Trend</th>
                                           <th>Average hrs per Employee</th>
@@ -82,6 +86,7 @@
                                           <th>High Focus (Time of Day)</th>
                                         </tr>
                                       </thead>
+
                                       <tbody>
                                         <tr>
                                           <td>Application Processing</td>
@@ -140,6 +145,7 @@
                                         </tr>
                                       </tbody>
                                     </table>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -152,6 +158,7 @@
                                 <div class="table-performance-overview">
                                   <div class="row">
                                     <div class="col-lg-12">
+                                      <div class="table-responsive">
                                       <table class="table table-bordered">
                                         <thead>
                                           <tr>
@@ -182,6 +189,7 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                    </div>
                                     </div>
                                   </div>
                                 </div>
@@ -199,21 +207,11 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="change-activity-overview">
-                                <div class="row">
-                                  <div class="col-lg-7">
-                                    <h4>Activity Overview</h4>
-                                  </div>
-                                    <div class="activity-trend">
-                                    <div class="col-lg-5">
-                                      <h4>Activity Trend <span>(Achieved Time)</span></h4>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
                               <div class="table-div-activity">
                                 <div class="row">
-                                  <div class="col-lg-7">
+                                  <div class="col-lg-7 col-md-12">
+                                    <h4 class="activity-Overview-text">Activity Overview</h4>
+                                    <div class="table-responsive">
                                     <table class="table table-bordered">
                                       <thead>
                                         <tr>
@@ -278,9 +276,13 @@
                                         </tr>
                                       </tbody>
                                     </table>
+                                    </div>
                                   </div>
-                                  <div class="col-lg-5">
-                                    <img src="./img/chart.PNG">
+                                  <div class="col-lg-5 col-md-12">
+                                    <div class="activity-trend">
+                                      <h4>Activity Trend <span>(Achieved Time)</span></h4>
+                                    </div>
+                                    <img class="img-responsive" src="./img/chart.PNG">
                                   </div>
                                 </div>
                               </div>
@@ -293,6 +295,7 @@
                                 <div class="table-performance-overview">
                                   <div class="row">
                                     <div class="col-lg-12">
+                                      <div class="table-responsive">
                                       <table class="table table-bordered">
                                         <thead>
                                           <tr>
@@ -324,6 +327,7 @@
                                         </tbody>
                                       </table>
                                     </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -332,23 +336,65 @@
                         </div>
                      </div>
                      <div id="cerdit-card" class="tab-pane fade">
+                      <div class="common-main-div">
+                        <p onclick="backScreen()" class="backIcon"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
                         <label>Department</label>
                         <h4>Credit Card</h4>
-                        <div class="multiple-select">
-                          <div class="row">
-                            <div class="col-lg-6">
-                              <label class="w-100">Display View By:</label>
-                              <select class="display-view-by">
-                                <option>Activity</option>
-                                <option>All Employee</option>
-                              </select>
-                            </div>
-                            <div class="col-lg-6">
-                              <label class="w-100">Select Date Range:</label>
-                              <input type="date" name="date-range">
+                          <div class="multiple-select">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <label class="w-100">Display View By:</label>
+                                <select class="display-view-by">
+                                  <option>Activity</option>
+                                  <option>All Employee</option>
+                                </select>
+                              </div>
+                              <div class="col-lg-6">
+                                <label class="w-100">Select Date Range:</label>
+                                <div class="calender-Div">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <span class="changeText">Today, June 28</span>
+                                    <i onclick="calenderBoxShow()" class="fa fa-caret-down" aria-hidden="true"></i>
+                                    
+                                </div>
+                                <div class="calender-Box">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <label>From</label>
+                                        <div class="from-Calender">
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                          <span>06/10/20</span>
+                                        </div>
+                                      </div>
+                                       <div class="col-lg-6">
+                                        <label>To</label>
+                                        <div class="from-Calender">
+                                          <i for="#date-input" class="fa fa-calendar" aria-hidden="true"></i>
+                                          <span>06/10/20</span>
+                                          <input style="display: none;" id="date-input" type="date" name="to-date">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-lg-12">
+                                        <div class="commonDiv">
+                                          <p>Today</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p class="weekText" onclick="getValue()">Week over Week</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p>Month over Month</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>      
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                      </div>
                         <div class="activity-Table">
                           <div class="table-card-div">
                             <div class="row">
@@ -356,7 +402,7 @@
                                 <table class="table table-bordered">
                                         <thead>
                                           <tr>
-                                            <th>Activity</th>
+                                            <th><span class="downArrow"><i class="fa fa-caret-down" aria-hidden="true"></i></span>Activity <i class="fa fa-angle-down" aria-hidden="true"></i></th>
                                             <th>Trend</th>
                                             <th>Average hrs per Employee</th>
                                             <th>Employee this Period</th>
@@ -371,8 +417,8 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <td>Application Processing</td>
+                                          <tr onclick="applicationTable()">
+                                            <td><div class="triangle"></div>Application Processing</td>
                                             <td></td>
                                             <td>6 h</td>
                                             <td>32</td>
@@ -547,6 +593,602 @@
                             </div>
                           </div>
                         </div>
+                        <div class="week-by-week">
+                          <div class="activity-Table">
+                            <div class="table-card-div">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th><span onclick="showWeekData()" class="downArrow"><i class="fa fa-caret-up" aria-hidden="true"></i></span> June 1-7 , 2020 <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                                              <th>Trend</th>
+                                              <th>Average hrs per Employee</th>
+                                              <th>Employee this Period</th>
+                                              <th colspan="2">Assigned Time</th>
+                                              <th colspan="2">Achieved Time</th>
+                                              <th>High Focus (Time of Day)</th>
+                                              <th>07:00</th>
+                                              <th>08:00</th>
+                                              <th>09:00</th>
+                                              <th>10:00</th>
+                                              <th>11:00</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr onclick="applicationTable()">
+                                              <td><div class="triangle"></div>Application Processing</td>
+                                              <td></td>
+                                              <td>6 h</td>
+                                              <td>32</td>
+                                              <td>192 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">185 h</td>
+                                              <td class="achrived-target">96%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Customer Service</td>
+                                              <td></td>
+                                              <td>6 h</td>
+                                              <td>40</td>
+                                              <td>240 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">240 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>9:00 - 10:00</td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar bar-255"></div>
+                                                  <div class="child-bar bar-200"></div>
+                                                </div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Last and Stolen Cards</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>24</td>
+                                              <td>120 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">150 h</td>
+                                              <td class="exceed-target">125%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar bar-335"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Account Maintance</td>
+                                              <td></td>
+                                              <td>4 h</td>
+                                              <td>15</td>
+                                              <td>60 h</td>
+                                              <td>57%</td>
+                                              <td class="below-target">32 h</td>
+                                              <td class="below-target">53%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Fraud</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="achrived-target">40 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Facebook.com</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">40 h</td>
+                                              <td class="exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                
+                                              </td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>Torontostar.com</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">40 h</td>
+                                              <td class="exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <div class="bar-Div">
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div></td>
+                                                <td></td>
+                                                <td></td>
+                                              </div>
+                                            </tr>
+                                          </tbody>
+                                          <div class="footer">
+                                          <tfoot>
+                                            <tr>
+                                              <td colspan="3">Totals (Aggregate)</td>
+                                              <td class="text-center">227</td>
+                                              <td class="text-center">652</td>
+                                              <td></td>
+                                              <td>4,007 h</td>
+                                              <td colspan="7"></td>
+                                            </tr>
+                                          </tfoot>
+                                          </div>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="activity-Table">
+                            <div class="table-card-div">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th><span class="downArrow"><i class="fa fa-caret-up" aria-hidden="true"></i></span>June 8-14 , 2020 <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                                              <th>Trend</th>
+                                              <th>Average hrs per Employee</th>
+                                              <th>Employee this Period</th>
+                                              <th colspan="2">Assigned Time</th>
+                                              <th colspan="2">Achieved Time</th>
+                                              <th>High Focus (Time of Day)</th>
+                                              <th>07:00</th>
+                                              <th>08:00</th>
+                                              <th>09:00</th>
+                                              <th>10:00</th>
+                                              <th>11:00</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr onclick="applicationTable()">
+                                              <td><div class="triangle"></div>Application Processing</td>
+                                              <td></td>
+                                              <td>6 h</td>
+                                              <td>32</td>
+                                              <td>192 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">185 h</td>
+                                              <td class="achrived-target">96%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Customer Service</td>
+                                              <td></td>
+                                              <td>6 h</td>
+                                              <td>40</td>
+                                              <td>240 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">240 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>9:00 - 10:00</td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar bar-255"></div>
+                                                  <div class="child-bar bar-200"></div>
+                                                </div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Last and Stolen Cards</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>24</td>
+                                              <td>120 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">150 h</td>
+                                              <td class="exceed-target">125%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar bar-335"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Account Maintance</td>
+                                              <td></td>
+                                              <td>4 h</td>
+                                              <td>15</td>
+                                              <td>60 h</td>
+                                              <td>57%</td>
+                                              <td class="below-target">32 h</td>
+                                              <td class="below-target">53%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Fraud</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="achrived-target">40 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Facebook.com</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">40 h</td>
+                                              <td class="exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                
+                                              </td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>Torontostar.com</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">40 h</td>
+                                              <td class="exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <div class="bar-Div">
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div></td>
+                                                <td></td>
+                                                <td></td>
+                                              </div>
+                                            </tr>
+                                          </tbody>
+                                          <div class="footer">
+                                          <tfoot>
+                                            <tr>
+                                              <td colspan="3">Totals (Aggregate)</td>
+                                              <td class="text-center">227</td>
+                                              <td class="text-center">652</td>
+                                              <td></td>
+                                              <td>4,007 h</td>
+                                              <td colspan="7"></td>
+                                            </tr>
+                                          </tfoot>
+                                          </div>
+                                        </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="activity-Table">
+                            <div class="table-card-div">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th><span class="downArrow"><i class="fa fa-caret-up" aria-hidden="true"></i></span> June 15-22 , 2020 <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                                              <th>Trend</th>
+                                              <th>Average hrs per Employee</th>
+                                              <th>Employee this Period</th>
+                                              <th colspan="2">Assigned Time</th>
+                                              <th colspan="2">Achieved Time</th>
+                                              <th>High Focus (Time of Day)</th>
+                                              <th>07:00</th>
+                                              <th>08:00</th>
+                                              <th>09:00</th>
+                                              <th>10:00</th>
+                                              <th>11:00</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr onclick="applicationTable()">
+                                              <td><div class="triangle"></div>Application Processing</td>
+                                              <td></td>
+                                              <td>6 h</td>
+                                              <td>32</td>
+                                              <td>192 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">185 h</td>
+                                              <td class="achrived-target">96%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Customer Service</td>
+                                              <td></td>
+                                              <td>6 h</td>
+                                              <td>40</td>
+                                              <td>240 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">240 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>9:00 - 10:00</td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar bar-255"></div>
+                                                  <div class="child-bar bar-200"></div>
+                                                </div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Last and Stolen Cards</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>24</td>
+                                              <td>120 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">150 h</td>
+                                              <td class="exceed-target">125%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar bar-335"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Account Maintance</td>
+                                              <td></td>
+                                              <td>4 h</td>
+                                              <td>15</td>
+                                              <td>60 h</td>
+                                              <td>57%</td>
+                                              <td class="below-target">32 h</td>
+                                              <td class="below-target">53%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Fraud</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="achrived-target">40 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Facebook.com</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">40 h</td>
+                                              <td class="exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                                <td>
+                                                  
+                                                </td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                
+                                              </td>
+                                              <td>
+                                                <div class="child-bar"></div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>Torontostar.com</td>
+                                              <td></td>
+                                              <td>5 h</td>
+                                              <td>8</td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td class="exceed-target">40 h</td>
+                                              <td class="exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <div class="bar-Div">
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar bar-192"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div></td>
+                                                <td></td>
+                                                <td></td>
+                                              </div>
+                                            </tr>
+                                          </tbody>
+                                          <div class="footer">
+                                          <tfoot>
+                                            <tr>
+                                              <td colspan="3">Totals (Aggregate)</td>
+                                              <td class="text-center">227</td>
+                                              <td class="text-center">652</td>
+                                              <td></td>
+                                              <td>4,007 h</td>
+                                              <td colspan="7"></td>
+                                            </tr>
+                                          </tfoot>
+                                          </div>
+                                        </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <div class="employee-Table">
                           <div class="table-card-div">
                             <div class="row">
@@ -554,6 +1196,7 @@
                                 <table class="table table-bordered">
                                         <thead>
                                           <tr>
+                                            <th></th>
                                             <th>All Employee</th>
                                             <th>Trend</th>
                                             <th colspan="2">Assigned Time</th>
@@ -570,7 +1213,31 @@
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <td>Mary Ellen Black</td>
+                                            <td class="text-center"><i onclick="openBox()" class="fa fa-file-text-o" aria-hidden="true"></i>
+                                              <div class="open-box">
+                                                <div class="info-Box">
+                                                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                                  <div class="name-Box">
+                                                    <h4>Manager</h4>
+                                                    <p>14:08 - July 2, 2020</p>
+                                                  </div>
+                                                </div>
+                                                <div class="detail-Box">
+                                                  <p><strong>Activity:</strong> Application Processing</p>
+                                                  <p><strong>Employee:</strong> Anna Thampson</p>
+                                                </div>
+                                                <div class="note-Box">
+                                                  <p>Note</p>
+                                                  <p>Rule: When employee click on this "Add note icon" - this box shows up are they directly insert a note. </p>
+                                                </div>
+                                                <div class="btn-Box">
+                                                  <a onclick="openBox()">Add Note</a>
+                                                  <a onclick="openBox()">Cancel</a>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td onclick="employeeTable()" style="position: relative;">
+                                            <div class="triangle"></div>Mary Ellen Black</td>
                                             <td></td>
                                             <td>6 h</td>
                                             <td>32</td>
@@ -596,7 +1263,9 @@
                                             <td></td>
                                           </tr>
                                           <tr>
-                                            <td>Erin Cowell</td>
+                                             <td class="text-center"><i onclick="openBox()" class="fa fa-file-text-o" aria-hidden="true"></i>
+                                            </td>
+                                            <td onclick="employeeTable()">Erin Cowell</td>
                                             <td></td>
                                             <td>6 h</td>
                                             <td>40</td>
@@ -612,7 +1281,8 @@
                                             <td></td>
                                           </tr>
                                           <tr>
-                                            <td>Lisa Pinkett</td>
+                                            <td class="text-center"><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                            <td onclick="employeeTable()">Lisa Pinkett</td>
                                             <td></td>
                                             <td>5 h</td>
                                             <td>24</td>
@@ -628,7 +1298,8 @@
                                             <td></td>
                                           </tr>
                                           <tr>
-                                            <td>Bob Smith</td>
+                                            <td class="text-center"><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                            <td onclick="employeeTable()">Bob Smith</td>
                                             <td></td>
                                             <td>4 h</td>
                                             <td>15</td>
@@ -651,7 +1322,8 @@
                                             </td>
                                           </tr>
                                           <tr>
-                                            <td>Bud Star</td>
+                                            <td class="text-center"><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                            <td onclick="employeeTable()">Bud Star</td>
                                             <td></td>
                                             <td>5 h</td>
                                             <td>8</td>
@@ -680,10 +1352,12 @@
                                               <div class="child-bar bar-right"></div>
                                             </td>
                                           </tr>
+
                                         </tbody>
                                         <div class="footer">
                                         <tfoot>
                                           <tr>
+                                            <td></td>
                                             <td colspan="2">Totals (Aggregate)</td>
                                             <td class="text-center">22 h</td>
                                             <td></td>
@@ -699,6 +1373,394 @@
                               </div>
                             </div>
                           </div>
+                        </div>
+                        <div class="row-click-employee-data">
+                          <p onclick="employeeTable()"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+                            <label>Employee</label>
+                            <h4>Mary Ellen Black</h4>
+                            <div class="multiple-select">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <label class="w-100">Display View By:</label>
+                                  <select class="display-view-by">
+                                    <option>Focus Area</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label class="w-100">Select Date Range:</label>
+                                  <input type="date" name="date-range">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table-card-div">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th></th>
+                                              <th>All Employee</th>
+                                              <th>Trend</th>
+                                              <th colspan="2">Assigned Time</th>
+                                              <th colspan="2">Achieved Time</th>
+                                              <th>High Focus (Time of Day)</th>
+                                              <th>High Focus (Duration)</th>
+                                              <th>Collective Focus Time</th>
+                                              <th>07:00</th>
+                                              <th>08:00</th>
+                                              <th>09:00</th>
+                                              <th>10:00</th>
+                                              <th>11:00</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td style="position: relative;"><div class="triangle"></div>
+                                                Application Processing</td>
+                                              <td></td>                                              <td>192 h</td>
+                                              <td>86%</td>
+                                              <td class="achrived-target">2 h</td>
+                                              <td class="achrived-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">1 h</td>
+                                              <td class="text-center">2 h</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td><div class="child-bar bar-65-left-50"></div></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Customer Service</td>
+                                              <td></td>
+                                              <td>240 h</td>
+                                              <td>86%</td>
+                                              <td>0 h</td>
+                                              <td>0%</td>
+                                              <td>9:00 - 10:00</td>
+                                              <td class="text-center">0</td>
+                                              <td class="text-center">0</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Last and Stolen Cards</td>
+                                              <td></td>
+                                              <td>120 h</td>
+                                              <td>71%</td>
+                                              <td class="below-target">30 m</td>
+                                              <td class="below-target">25%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">30 m</td>
+                                              <td class="text-center">30 m</td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar parent-bar-260"></div>
+                                                    
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar bar-50"></div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Account Maintance</td>
+                                              <td></td>
+                                              <td>60 h</td>
+                                              <td>57%</td>
+                                              <td class="exceed-target">3 h 32 m</td>
+                                              <td class="exceed-target">17%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">2 h</td>
+                                              <td class="text-center">3 h</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar parent-bar-193"></div>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar bar-50"></div>
+                                              </td>
+                                              <td> 
+                                                <div class="child-bar bar-50"></div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Fraud</td>
+                                              <td></td>
+                                              <td>40 h</td>
+                                              <td>71%</td>
+                                              <td>0</td>
+                                              <td>0</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">0</td>
+                                              <td class="text-center">0</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                          </tbody>
+                                          <div class="footer">
+                                          <tfoot>
+                                            <tr>
+                                              <td></td>
+                                              <td colspan="2">Totals (Aggregate)</td>
+                                              <td class="text-center">7h</td>
+                                              <td></td>
+                                              <td class="text-center">6 h</td>
+                                              <td colspan="2"></td>
+                                              <td class="text-center">5h 30m</td>
+                                              <td class="text-center">3h 30m</td>
+                                              <td colspan="7"></td>
+                                            </tr>
+                                          </tfoot>
+                                          </div>
+                                        </table>
+                                        </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="all-notes-div">
+                              <h4>All Notes</h4>
+                              <div class="container-fluid p-0">
+                                <div class="row">
+                                  <div class="col-lg-12">
+                                    <div class="table-div">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th>Date Submitted</th>
+                                            <th>Focus Area</th>
+                                            <th>Note</th>
+                                            <th>Submitted By</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>06/07/2020</td>
+                                            <td>Application Processing</td>
+                                            <td>Was below target as I was asked to support Customer Service</td>
+                                            <td>Anna Thompson</td>
+                                          </tr>
+                                            <tr>
+                                            <td>06/09/2020</td>
+                                            <td>Application Processing</td>
+                                            <td>Was below target as I was asked Anna to cover additional hours due to other staff member being on vacation.</td>
+                                            <td>Harold James</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row-click-application-data">
+                          <p onclick="applicationTable()"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+                            <label>Activity</label>
+                            <h4>Application Process</h4>
+                            <div class="multiple-select">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <label class="w-100">Display View By:</label>
+                                  <select class="display-view-by">
+                                    <option>Focus Area</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label class="w-100">Select Date Range:</label>
+                                  <input type="date" name="date-range">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table-card-div">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th></th>
+                                              <th>All Employee</th>
+                                              <th>Trend</th>
+                                              <th colspan="2">Assigned Time</th>
+                                              <th colspan="2">Achieved Time</th>
+                                              <th>High Focus (Time of Day)</th>
+                                              <th>High Focus (Duration)</th>
+                                              <th>Collective Focus Time</th>
+                                              <th>07:00</th>
+                                              <th>08:00</th>
+                                              <th>09:00</th>
+                                              <th>10:00</th>
+                                              <th>11:00</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Mary Ellen Black</td>
+                                              <td></td>                                              <td>192 h</td>
+                                              <td>86%</td>
+                                              <td class="text-center exceed-target">2 h</td>
+                                              <td class="text-center exceed-target">100%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">1 h</td>
+                                              <td class="text-center">2 h</td>
+                                                <td>
+                                                  <div class="bar">
+                                                    <div class="parent-bar"></div>
+                                                    <div class="child-bar"></div>
+                                                  </div>
+                                                </td>
+                                              <td></td>
+                                              <td></td>
+                                              <td><div class="child-bar bar-65-left-50"></div></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Erin Cowell</td>
+                                              <td></td>
+                                              <td>240 h</td>
+                                              <td>86%</td>
+                                              <td class="text-center below-target">0 h</td>
+                                              <td class="text-center below-target">0%</td>
+                                              <td>9:00 - 10:00</td>
+                                              <td class="text-center">0</td>
+                                              <td class="text-center">0</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Lisa Pinkett</td>
+                                              <td></td>
+                                              <td>120 h</td>
+                                              <td>71%</td>
+                                              <td class="text-center below-target">30 m</td>
+                                              <td class="text-center below-target">25%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">30 m</td>
+                                              <td class="text-center">30 m</td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                    <div class="parent-bar parent-bar-260"></div>
+                                                    
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar bar-50"></div>
+                                              </td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td>Bob Smith</td>
+                                              <td></td>
+                                              <td>60 h</td>
+                                              <td>57%</td>
+                                              <td class="text-center achrived-target">3 h 32 m</td>
+                                              <td class="text-center achrived-target">17%</td>
+                                              <td>10:00 - 12:00</td>
+                                              <td class="text-center">2 h</td>
+                                              <td class="text-center">3 h</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td>
+                                                <div class="bar">
+                                                  <div class="parent-bar parent-bar-193"></div>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="child-bar bar-50"></div>
+                                              </td>
+                                              <td> 
+                                                <div class="child-bar bar-50"></div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                          <div class="footer">
+                                          <tfoot>
+                                            <tr>
+                                              <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                                              <td colspan="2">Totals (Aggregate)</td>
+                                              <td class="text-center">7h</td>
+                                              <td></td>
+                                              <td class="text-center">6 h</td>
+                                              <td colspan="2"></td>
+                                              <td class="text-center">5h 30m</td>
+                                              <td class="text-center">3h 30m</td>
+                                              <td colspan="7"></td>
+                                            </tr>
+                                          </tfoot>
+                                          </div>
+                                        </table>
+                                        </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="all-notes-div">
+                              <h4>All Notes</h4>
+                              <div class="container-fluid p-0">
+                                <div class="row">
+                                  <div class="col-lg-12">
+                                    <div class="table-div">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th>Date Submitted</th>
+                                            <th>Focus Area</th>
+                                            <th>Note</th>
+                                            <th>Submitted By</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>06/07/2020</td>
+                                            <td>Application Processing</td>
+                                            <td>Was below target as I was asked to support Customer Service</td>
+                                            <td>Anna Thompson</td>
+                                          </tr>
+                                            <tr>
+                                            <td>06/09/2020</td>
+                                            <td>Application Processing</td>
+                                            <td>Was below target as I was asked Anna to cover additional hours due to other staff member being on vacation.</td>
+                                            <td>Harold James</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                      </div>
                      <div id="card" class="tab-pane fade">
@@ -722,7 +1784,7 @@
                                        <div id="activity" class="tab-pane fade in active">
                                           <div class="manage-activity-div">
                                              <div class="row">
-                                                <div class="col-lg-8 col-md-6 col-sm-6">
+                                                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
                                                    <p>Division</p>
                                                    <h4>Credit and Lending</h4>
                                                    <div class="selectDiv">
@@ -740,7 +1802,7 @@
                                                       </div>
                                                    </div>
                                                 </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                                                    <div class="create-new-activity">
                                                       <button onclick="createActivity()" class="createActivity">Create New Activity</button>
                                                       <button class="editActivityText">Edit Activity Mapping</button>
@@ -758,6 +1820,7 @@
                                                 <div class="tableDiv">
                                                    <div class="row">
                                                       <div class="col-lg-12">
+                                                        <div class="table-responsive">
                                                          <table class="table table-bordered">
                                                             <thead>
                                                                <tr>
@@ -770,7 +1833,8 @@
                                                             <tbody id="assignActivity">
                                                             </tbody>
                                                          </table>
-                                                         <div id="totalShowDiv" class="totalDiv">
+                                                       </div>
+                                                         <div id="totalShowDiv" class="totalDiv table-responsive">
                                                             <table>
                                                                <tr>
                                                                   <td>
@@ -831,6 +1895,7 @@
                                                 <div class="tableDiv">
                                                    <div class="row">
                                                       <div class="col-lg-12">
+                                                        <div class="table-responsive">
                                                          <table class="table table-bordered">
                                                             <thead>
                                                                <tr>
@@ -843,7 +1908,8 @@
                                                             <tbody id="loanAssignActivity">
                                                             </tbody>
                                                          </table>
-                                                         <div id="totalLoanShowDiv" class="totalDiv">
+                                                         </div>
+                                                         <div id="totalLoanShowDiv" class="totalDiv table-responsive">
                                                             <table>
                                                                <tr>
                                                                   <td>
@@ -1091,7 +2157,7 @@
                                        <div id="operation" class="tab-pane fade">
                                           <div class="multiple-select-options">
                                              <div class="row">
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                    <div class="selectDiv">
                                                       <label>Select Division</label>
                                                       <select>
@@ -1099,7 +2165,7 @@
                                                       </select>
                                                    </div>
                                                 </div>
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                    <div class="selectDiv">
                                                       <label>Select Department</label>
                                                       <select>
@@ -1117,6 +2183,7 @@
                                              </div>
                                              <div class="row">
                                                 <div class="col-lg-12">
+                                                  <div class="table-responsive">
                                                    <table class="table table-bordered">
                                                       <thead>
                                                          <tr>
@@ -1189,6 +2256,7 @@
                                                          </tr>
                                                       </tbody>
                                                    </table>
+                                                   </div>
                                                 </div>
                                              </div>
                                              <div id="finishTableButtonDiv">
@@ -1408,9 +2476,69 @@
             $('.employee-Table').css('display','none');
           }
           else if(end=="All Employee"){
+            $('.backIcon').css('display','block');
             $('.activity-Table').css('display','none');
             $('.employee-Table').css('display','block');
           }
       });
+      function backScreen(){
+        if($('.employee-Table').css('display')==="block"){
+            $('.activity-Table').css('display','block');
+            $('.employee-Table').css('display','none');
+            $('.backIcon').css('display','none');
+        }
+      }
+      function openBox(){
+        if($('.open-box').css('display')=="block"){
+          $('.open-box').css('display', 'none');
+        }
+        else{
+          $('.open-box').css('display', 'block')
+        }
+      }
+      function employeeTable(){
+        if($('.row-click-employee-data').css('display')==="block"){
+          $('.row-click-employee-data').css('display', 'none');
+          $('.common-main-div').css('display', 'block');
+          $('.employee-Table').css('display', 'block');
+        }
+        else{
+          $('.row-click-employee-data').css('display', 'block');
+          $('.common-main-div').css('display', 'none');
+          $('.employee-Table').css('display', 'none');
+        }
+      }
+      function applicationTable(){
+        if($('.row-click-application-data').css('display')==="block"){
+          $('.row-click-application-data').css('display', 'none');
+          $('.activity-Table').css('display', 'block');
+          $('.common-main-div').css('display', 'block');
+        }
+        else{
+          $('.row-click-application-data').css('display', 'block');
+          $('.activity-Table').css('display', 'none');
+          $('.common-main-div').css('display', 'none');
+        }
+      }
+      function calenderBoxShow(){
+        if($('.calender-Box').css('display')==="block"){
+          $('.calender-Box').css('display','none');
+        }
+        else{
+          $('.calender-Box').css('display','block');
+        }
+      }
+      function getValue(){
+        var val=$('.commonDiv .weekText').text();
+        $('.changeText').text(val);
+        $('.calender-Box').css('display','none');
+        if($('.changeText').text()==="Week over Week"){
+          $('.week-by-week').css('display','block');
+          $('.downArrow').css('display','block');
+        }
+      }
+      function showWeekData(){
+        console.log("show");
+      }
    </script>
 </html>

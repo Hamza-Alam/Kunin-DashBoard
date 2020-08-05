@@ -26,7 +26,7 @@ select:focus,input:focus{
 /************************ Common Css - End ***********************/
 .main_header{
 	position: fixed;
-    width: 100%;
+    width: calc(100% - 100px);
     z-index: 999999;
 	height: 70px;
 	background: rgb(35,75,90);
@@ -48,9 +48,57 @@ select:focus,input:focus{
     color: #fff;
     padding-left: 30px;
 }
+.calender-Div{
+	font-size: 16px
+	width: 100%;
+    padding: 11px 10px;
+    border: 1px solid #01b1b1;
+    border-radius: 2px;
+}
+.calender-Div i:nth-child(1){
+	margin-right: 20px;
+}
+.calender-Div i:last-child{
+	float: right;
+	cursor: pointer;
+}
+.calender-Box{
+	border-radius: 3px;
+	border: .5px solid #B9DCDC;
+    background: #ffff;
+    box-shadow: 2px 2px 5px 0px rgba(163,160,163,1);
+    padding: 20px 0px 20px;
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+    left: 250px;
+    width: 100%;
+    display: none;
+}
+.calender-Box .commonDiv{
+	text-align: center;
+    margin: 20px 0px;
+    border: 1px solid #B9DCDC;
+    padding: 7px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.calender-Box .commonDiv:hover{
+	color: #fff;
+	background: rgb(14,125,135);
+	background: linear-gradient(87deg, rgba(14,125,135,1) 0%, rgba(23,103,116,1) 50%, rgba(34,76,91,1) 100%);
+}
+.calender-Box input,.calender-Box .from-Calender{
+	border-radius: 3px !important;
+    padding: 7px 10px !important;
+    border: .5px solid #B9DCDC !important;
+}
+.calender-Box .from-Calender i{
+	margin-right: 5px;
+}
 .main_header .loginText{
 	padding: 21px;
-    text-align: center;
+    text-align: right;
     font-size: 19px;
     color: #fff;
 }
@@ -168,9 +216,54 @@ select:focus,input:focus{
 	width: 100%;
     min-width: 107px;
 }
+#cerdit-card .activity-Table .triangle{
+	 content: "";
+    width: 0;
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 28px 0 0;
+    border-color: #FFA189 transparent transparent transparent;
+    left: 15px;
+    top: 70px;
+}
+.row-click-employee-data .table-card-div .triangle,.employee-Table .table-card-div .triangle{
+	 content: "";
+    width: 0;
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 28px 0 0;
+    border-color: #FFA189 transparent transparent transparent;
+    left: 0px;
+    top: 0px;
+}
+.triangle{
+	 content: "";
+    width: 0;
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 28px 0 0;
+    border-color: #FFA189 transparent transparent transparent;
+    left: 0px;
+    top: 0px;
+}
+/*tbody tr>td:nth-child(1):before {
+    content: "";
+    width: 0;
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 28px 0 0;
+    border-color: #FFA189 transparent transparent transparent;
+    left: 15px;
+    top: 70px;
+}*/
 .dateSelect input,#main .maincontent #card .tabs-content #activity .selectDiv .departmentSelect select,#main .maincontent #card .tabs-content #activity .selectDiv .assignBySelect select{
 	padding: 11px 10px;
 	border-color: #bceaea;
+	border: 1px solid #01B1B1;
 }
 #main .maincontent #card .tabs-content #activity .selectDiv .departmentSelect select:focus,#main .maincontent #card .tabs-content #activity .selectDiv .assignBySelect select:focus{
 	outline-color: #bceaea;
@@ -388,7 +481,7 @@ display: none;
     font-size: 22px;
     color: #1a4862;
 }
-#cerdit-card .table-card-div,.editActivity .drop-down-div,#manager .activity-overview,#manager .table-div-activity,#manager .table-performance-overview{
+#cerdit-card .all-notes-div .table-div,#cerdit-card .all-notes-div,#cerdit-card .table-card-div,.editActivity .drop-down-div,#manager .activity-overview,#manager .table-div-activity,#manager .table-performance-overview{
 	margin-top: 40px;
 }
 .editActivity .drop-down-div label{
@@ -573,7 +666,7 @@ display: none;
 #manager .introDiv .progress-image-div{
     margin-top: 20px;
 }
-#manager .table-div-activity{
+#manager .table-div-activity,#cerdit-card .all-notes-div .table-div{
 	width: 100%;
     max-width: 80%;
 }
@@ -613,7 +706,7 @@ display: none;
 #cerdit-card table tbody>tr>td:nth-child(4),#cerdit-card table tbody>tr>td:nth-child(3),.table-div-activity .table>tbody>tr>td:nth-child(3),.table-div-activity .table>tbody>tr>td:nth-child(4),.table-div-activity .table>tbody>tr>td:nth-child(5),.table-div-activity .table>tbody>tr>td:nth-child(6),.table-div-activity .table>tbody>tr>td:nth-child(7),.table-div-activity .table>tbody>tr>td:nth-child(8),.table-div-activity .table>tbody>tr>td:nth-child(9){
 	text-align: center;
 }
-.table-performance-overview .table>thead{
+.table-performance-overview .table>thead,#cerdit-card .all-notes-div .table-div thead{
 	background-color: #feb4b4;
 }
 .table-performance-overview .table>tbody>tr>td{
@@ -628,9 +721,9 @@ display: none;
 .change-date-div .table-div-activity .table>thead>tr>th:nth-child(2),.change-date-div .table-div-activity .table>thead>tr>th:nth-child(4),.change-date-div .table-div-activity .table>thead>tr>th:nth-child(5){
 	width: 17%;
 }
-.change-date-div .table-div-activity .table>thead>tr>th{
+/*.change-date-div .table-div-activity .table>thead>tr>th{
 	padding: 0px 8px !important;
-}
+}*/
 .change-date-div .table-div-activity .table>tbody>tr>td{
 	text-align: center;
 }
@@ -641,13 +734,13 @@ display: none;
     display: none;
 }
 .achrived-target{
-	background-color: #a8e6b6 !important;
+	background-color: #A8E6B6 !important;
 }
 .below-target{
-	background-color: #feb4b4 !important;
+	background-color: #FFA2A2 !important;
 }
 .exceed-target{
-	background-color: #fcffca !important;
+	background-color: #FCFFCA !important;
 }
 #cerdit-card label{
 	font-weight: 400;
@@ -660,7 +753,7 @@ display: none;
 #cerdit-card .multiple-select select,#cerdit-card .multiple-select input{
 	width: 100%;
 	padding: 11px 10px;
-    border: 1px solid #bceaea;
+    border: 1px solid #01b1b1;
     border-radius: 2px;
 }
 #cerdit-card .multiple-select{
@@ -679,17 +772,40 @@ display: none;
     color: #2A3A4B;
 }
 #cerdit-card table thead>tr>th:nth-child(1){
-	width: 18%;
+	width: 100%;
+    min-width: 180px;
+    font-weight: 600;
+    color: #224c5b;
+    font-size: 14px;
+}
+#cerdit-card .employee-Table table thead>tr>th:nth-child(1){
+	min-width: initial;
 }
 #cerdit-card table thead>tr>th:nth-child(2){
-	width: 9%;
 	text-align: center;
 }
-#cerdit-card table thead>tr>th:nth-child(3),#cerdit-card table thead>tr>th:nth-child(4){
+#cerdit-card table thead>tr>th:nth-child(3){
 	width: 8%;
 }
-#cerdit-card table thead>tr>th:nth-child(5),#cerdit-card table thead>tr>th:nth-child(6){
-	width: 11%;
+#cerdit-card table thead>tr>th:nth-child(4){
+	width: 100%;
+    min-width: 102px;
+}
+#cerdit-card table thead>tr>th:nth-child(7){
+	width: 10%;
+    min-width: 141px;
+}
+#cerdit-card .row-click-employee-data thead>tr>th:nth-child(5),#cerdit-card .row-click-application-data thead>tr>th:nth-child(5){
+	width: 100%;
+	min-width: 156px !important;
+}
+#cerdit-card .row-click-employee-data thead>tr>th:nth-child(8),#cerdit-card .row-click-application-data thead>tr>th:nth-child(8){
+	width: 100%;
+	min-width: 105px !important;
+}
+#cerdit-card .row-click-employee-data thead>tr>th:nth-child(7),#cerdit-card table thead>tr>th:nth-child(5),#cerdit-card table thead>tr>th:nth-child(6){
+	width: 100%;
+    min-width: 135px;
 }
 #cerdit-card table tbody tr>td {
     padding: 15px !important;
@@ -704,7 +820,7 @@ display: none;
     color: #fff;
 }
 #cerdit-card tfoot tr>td{
-	padding: 17px 10px !important;
+	padding: 15px 7px !important;
 }
 .parent-bar{
 	width: 324px;
@@ -714,6 +830,12 @@ display: none;
     top: 5px;
     left: 6px;
     border-radius: 5px 5px 5px 5px;
+}
+.parent-bar-260{
+	width: 260px;
+}
+.parent-bar-193{
+	width: 193px;
 }
 .child-bar{
 	width: 98%;
@@ -736,6 +858,11 @@ display: none;
 }
 .bar-255{
 	width: 255px;
+}
+.bar-65-left-50{
+	width: 100%;
+    max-width: 65%;
+    left: 50px;
 }
 .bar-60{
 	width: 100%;
@@ -785,26 +912,236 @@ display: none;
 	width: 100%;
     max-width: 15%;
 }
+.bar-50{
+	width: 100%;
+    max-width: 50%;
+}
 .employee-Table{
 	display: none;
 }
 #cerdit-card table{
 	background-color: #ffffff;
 }
+#cerdit-card .employee-Table table tbody>tr,#cerdit-card .table-card-div table tbody>tr{
+	cursor: pointer;
+}
 #cerdit-card .employee-Table table thead>tr>th:nth-child(1){
-	width: 14%;
+	width: 5%;
+	border-left: 0px !important;
+    border-bottom: 5px solid #fff;
+    border-top: 1px solid #fff;
+}
+.row-click-employee-data table thead>tr>th:nth-child(1),.row-click-application-data table thead>tr>th:nth-child(1){
+	max-width: initial;
+	width: initial !important;
+}
+.row-click-employee-data table thead>tr>th:nth-child(4),.row-click-application-data table thead>tr>th:nth-child(4){
+	width: 100% !important;
+	min-width: 156px !important;
+}
+.row-click-employee-data table thead>tr>th:nth-child(3),#cerdit-card .employee-Table table thead>tr>th:nth-child(2),#cerdit-card .employee-Table table thead>tr>th:nth-child(4){
+	width: 100% !important;
+	min-width: 140px !important;
 }
 #cerdit-card .employee-Table table thead>tr>th{
-	padding: 15px !important;
+	padding: 6px 15px !important;
 }
-#cerdit-card .employee-Table table thead>tr>th:nth-child(3), #cerdit-card .employee-Table table thead>tr>th:nth-child(4){
-	width: 11%;
+#cerdit-card .employee-Table table thead>tr>th:nth-child(4), #cerdit-card .employee-Table table thead>tr>th:nth-child(5){
+	width: 14%;
 }
-#cerdit-card .employee-Table table thead>tr>th:nth-child(5), #cerdit-card .employee-Table table thead>tr>th:nth-child(6){
-	width: 10%;
+#cerdit-card .employee-Table table thead>tr>th:nth-child(6), #cerdit-card .employee-Table table thead>tr>th:nth-child(7){
+	width: 14%;
+}
+#cerdit-card .employee-Table table thead>tr>th:nth-child(8),.row-click-employee-data table thead>tr>th:nth-child(7){
+	width: 100%;
+	min-width: 134px !important;
+}
+#cerdit-card .row-click-application-data .table-bordered>tbody>tr>td:nth-child(1),#cerdit-card .employee-Table .table-bordered>tbody>tr>td:nth-child(1),#cerdit-card .row-click-employee-data .table-bordered>tbody>tr>td:nth-child(1), #cerdit-card .row-click-application-data .table-bordered>tbody>tr>td:nth-child(1){
+	border-width: 0px !important;
+	position: relative;
+}
+#cerdit-card .row-click-employee-data .table-bordered>thead>tr>th:nth-child(2),#cerdit-card .row-click-application-data .table-bordered>thead>tr>th:nth-child(2){
+	width: 100% !important;
+	min-width: 180px !important;
+	text-align: left;
+}
+#cerdit-card .row-click-employee-data .table-bordered>thead>tr>th:nth-child(3),#cerdit-card .row-click-application-data .table-bordered>thead>tr>th:nth-child(3){
+	width: 100% !important;
+    min-width: 90px !important;
+}
+#cerdit-card .row-click-employee-data .table-bordered>thead>tr>th:nth-child(1),#cerdit-card .row-click-application-data .table-bordered>thead>tr>th:nth-child(1){
+	min-width: initial !important;
+	border: 0px !important;
+	border-bottom: 5px solid #fff !important;
+	border-top: 1px solid #fff !important;
+}
+#cerdit-card .employee-Table table,#cerdit-card .row-click-employee-data table,#cerdit-card .row-click-application-data table{
+	border-left: 0px !important;
+}
+#cerdit-card .employee-Table table>tfoot>tr>td:nth-child(1),#cerdit-card .row-click-employee-data table>tfoot>tr>td:nth-child(1),#cerdit-card .row-click-application-data table>tfoot>tr>td:nth-child(1){
+	background-color: #fff !important;
+	border-top: 0px !important;
+	border-left: 0px !important;
+	border-bottom: 1px solid #fff;
+	color: #5a5d5a;
+	text-align: center;
+}
+#cerdit-card .employee-Table .open-box{
+	position: absolute;
+    z-index: 999999;
+    background: #ffff;
+    left: 51px;
+    top: 12px;
+    width: 100%;
+    min-width: 234px;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(163,160,163,1);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(163,160,163,1);
+	box-shadow: 2px 2px 5px 0px rgba(163,160,163,1);
+	display: none;
+}
+#cerdit-card .employee-Table .open-box .info-Box{
+	display: flex;
+	padding-bottom: 5px;
+    border-bottom: 1px solid #eeee;
+}
+#cerdit-card .employee-Table .open-box .info-Box i{
+	font-size: 25px;
+    padding-right: 20px;
+}
+#cerdit-card .employee-Table .open-box .info-Box .name-Box,#cerdit-card .employee-Table .btn-Box{
+	text-align: left;
+}
+#cerdit-card .employee-Table .open-box .info-Box .name-Box h4{
+	font-size: 14px;
+    font-weight: 600;
+}
+#cerdit-card .employee-Table .open-box .info-Box .name-Box p{
+	padding-top: 5px;
+	font-size: 14px;
+}
+#cerdit-card .employee-Table .open-box .detail-Box{
+	text-align: left;
+    padding: 10px 0px;
+}
+#cerdit-card .employee-Table .open-box .detail-Box p{
+	padding: 5px 0px;
+}
+#cerdit-card .employee-Table .note-Box{
+	text-align: left;
+    padding: 5px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+#cerdit-card .employee-Table .note-Box p{
+	font-size: 11px;
+	padding: 5px 0px;
+}
+#cerdit-card .employee-Table .btn-Box a:nth-child(1){
+	background: #00adff8a;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #2e4050;
+    font-size: 11px;
+    margin-right: 20px;
+}
+#cerdit-card .employee-Table .btn-Box a{
+	font-size: 11px;
+	color: #2e4050;
+	cursor: pointer;
+}
+#cerdit-card .row-click-employee-data,.row-click-application-data{
+	display: none;
+}
+#cerdit-card .row-click-employee-data p:nth-child(1),#cerdit-card .row-click-application-data p:nth-child(1){
+	font-size: 21px;
+    padding: 10px 0px;
+    color: #224c5b;
+    cursor: pointer;
+}
+.backIcon{
+	font-size: 21px;
+    padding: 10px 0px;
+    color: #224c5b;
+    cursor: pointer;
+    display: none;
+}
+#cerdit-card .row-click-employee-data table>thead,#cerdit-card .table-card-div table>thead{
+	border-bottom: 5px solid #01b1b1;
+}
+#cerdit-card .row-click-employee-data tbody>tr>td {
+    position: relative;
+}
+#cerdit-card .row-click-employee-data tbody>tr>td:nth-child(6),#cerdit-card .table-card-div tbody>tr>td:nth-child(6){
+	border-right: 3px solid #01b1b1;
+}
+#cerdit-card .all-notes-div .table-div thead{
+	border-bottom: 0px;
+}
+#cerdit-card .all-notes-div .table-div thead tr>th{
+	padding: 17px !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+#cerdit-card .all-notes-div .table-div thead tr>th:nth-child(1){
+	width: 8%;
+}
+#cerdit-card .all-notes-div .table-div thead tr>th:nth-child(2){
+	text-align: left;
+}
+#cerdit-card .all-notes-div .table-div tbody tr>td{
+	vertical-align: middle;
+	text-align: left;
+}
+.activity-Overview-text,.activity-trend h4{
+	margin-bottom: 30px;
+}
+.all-notes-div table thead tr th:nth-child(2){
+	width: 20%;
+}
+#cerdit-card .row-click-employee-data .all-notes-div .table-bordered>tbody>tr>td:nth-child(1),#cerdit-card .row-click-application-data .all-notes-div .table-bordered>tbody>tr>td:nth-child(1){
+	border-width: 1px !important;
+}
+#cerdit-card .row-click-employee-data .all-notes-div .table-bordered>thead>tr>th:nth-child(1),#cerdit-card .row-click-application-data .all-notes-div .table-bordered>thead>tr>th:nth-child(1){
+	width: initial !important;
+	min-width: 151px !important;
+	border-bottom: initial !important;  
+}
+#cerdit-card .row-click-employee-data .all-notes-div .table-bordered>thead>tr>th:nth-child(2),#cerdit-card .row-click-application-data .all-notes-div .table-bordered>thead>tr>th:nth-child(2){
+	width: initial !important;
+}
+.week-by-week{
+	display: none;
+}
+.week-by-week tbody tr {
+    display: none;
+}
+#cerdit-card .activity-Table table thead>tr>th:nth-child(1) i:last-child{
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+.downArrow{
+	position: absolute;
+    left: -13px;
+    font-size: 23px;
+    top: 17px;
+    display: none;
 }
 /************** Media-Query ************/
 @media only screen and (max-width: 1200px) {
+	#manager .introDiv .img-div{
+		padding-left: 0px !important;
+		text-align: left !important;
+	}
+	#manager .introDiv .img-div h4{
+		display: initial !important;
+		font-size: 15px;
+	}
+	#manager .introDiv .img-div h4 span{
+		margin-left: 0px;
+		font-size: 13px;
+	}
 .main_header {
     position: fixed;
     top: 0;
@@ -821,12 +1158,20 @@ display: none;
 #main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
 	max-width: 90%;
 }
+#manager .table-div-activity,#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
+	max-width: 100%;
+}
 }
 
 @media only screen and (max-width: 992px) {
+	#manager{
+		padding: 40px;
+	}
+	#main .maincontent .mainContent{
+		margin-top: 70px;
+	}
 .sideNav .siteName h4 {
     font-size: 25px;
-    padding: 23px 11px;
 	}
 .main_header p {
     padding: 27px;
@@ -837,14 +1182,81 @@ display: none;
     text-align: right;
     font-size: 15px;
 	}
+	.loginText{
+		display: none;
+	}
 }
 @media only screen and (max-width: 768px) {
-.main_header p {
-    padding: 32px 0px;
-    font-size: 12px;
+	.table-div-activity table thead>tr>th{
+		padding: 15px 20px !important;
+	}
+	#manager .dateSelect{
+		margin-bottom: 40px;
+	}
+	#main .maincontent #card .tabs-content .create-new-activity{
+		text-align: left;
+    	margin-top: 40px;
+	}
+	#main .maincontent #card .tabs-content #activity .selectDiv .assignBySelect{
+		margin-left: 0px;
+	}
+	#main .maincontent #card .tabs-content .create-new-activity .createActivity.#main .maincontent #card .tabs-content .create-new-activity .editActivityText{
+		max-width: 80%;
+	}
+	#main .maincontent #card .tabs-content .create-new-activity .editActivityText{
+		text-align: left;
+	}
+	.create-new-activity,#main .maincontent #card .tabs-content #activity .selectDiv{
+		display: grid;
+	}
+	#main .maincontent .mainContent{
+		margin-top: 50px;
+	}
+	#manager .introDiv h4{
+		margin-top: 40px;
+	}
+.main_header p,.main_header .loginText {
+    padding: 27px 0px;
+    font-size: 15px;
 }
-.main_header .loginText {
-    padding: 33px 0px;
-    font-size: 12px;
+.table-responsive{
+	margin-bottom: 0px;
 }
+#manager .table-performance-overview{
+	max-width: 100% !important;
+}
+}
+@media only screen and (max-width: 560px) {
+
+	#main .maincontent #card .tabs-content #activity p{
+		margin-bottom: 20px;
+	}
+	.create-activity-form-div .form-Div .select-division-departmet,.create-activity-form-div .form-Div .allocate-activity-div{
+		max-width: 100%;
+	}
+	.create-activity-form-div .input-form,.create-activity-form-div select{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#main .maincontent .tabs-Div .nav-tabs{
+		padding: 0px;
+	}
+	#main .maincontent .tabs-Div .nav-tabs>li{
+		width: 100%;
+	}
+	#main .maincontent .tabs-Div .nav-tabs>li:nth-child(1){
+		margin-bottom: 20px;
+	}
+	#main .maincontent .tabs-Div .nav-tabs>li:nth-child(2){
+		margin-left: 0px;
+	}
+	.user-profile-name{
+		display: none;
+	}
+	#manager .table-performance-overview,.optimal-div .multi-input,.optimal-div .multi-input input,.input-percentage input,.multiple-select-options,#main .maincontent #card .tabs-content .create-new-activity .createActivity,#main .maincontent #card .tabs-content .create-new-activity .editActivityText{
+		max-width: 100%;
+	}
+	#main .maincontent #card .tabs-content .assignActivityDiv{
+		margin-top: 50px;
+	}
 }
