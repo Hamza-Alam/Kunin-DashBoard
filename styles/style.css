@@ -49,7 +49,7 @@ select:focus,input:focus{
     padding-left: 30px;
 }
 .calender-Div{
-	font-size: 16px
+	font-size: 16px;
 	width: 100%;
     padding: 11px 10px;
     border: 1px solid #01b1b1;
@@ -74,6 +74,11 @@ select:focus,input:focus{
     left: 250px;
     width: 100%;
     display: none;
+}
+#cerdit-card .calender-Box{
+	top: 63%;
+    left: 90%;    
+    min-width: 300px;
 }
 .calender-Box .commonDiv{
 	text-align: center;
@@ -121,10 +126,6 @@ select:focus,input:focus{
 	border: none;
 	padding-top: 30px;
 	height: calc(100vh);
-	/*-webkit-box-shadow: 3px 3px 10px 0px rgba(204,204,204,1);
-	-moz-box-shadow: 3px 3px 10px 0px rgba(204,204,204,1);
-	box-shadow: 3px 3px 10px 0px rgba(204,204,204,1);*/
-
 }
 #main .sideNav .nav-tabs>li a:hover{
 	background-color: transparent;
@@ -183,6 +184,14 @@ select:focus,input:focus{
 	background-color: #fafafa;
     padding: 70px 50px;
     width: 100%;
+}
+#manager .calender-Box{
+	max-width: 75%;
+	top: 84%;
+    left: 48%;
+}
+#manager .calender-Div{
+	max-width: 50%;
 }
 #main .maincontent .mainContent{
 	margin-top: 50px;
@@ -249,17 +258,6 @@ select:focus,input:focus{
     left: 0px;
     top: 0px;
 }
-/*tbody tr>td:nth-child(1):before {
-    content: "";
-    width: 0;
-    position: absolute;
-    height: 0;
-    border-style: solid;
-    border-width: 28px 28px 0 0;
-    border-color: #FFA189 transparent transparent transparent;
-    left: 15px;
-    top: 70px;
-}*/
 .dateSelect input,#main .maincontent #card .tabs-content #activity .selectDiv .departmentSelect select,#main .maincontent #card .tabs-content #activity .selectDiv .assignBySelect select{
 	padding: 11px 10px;
 	border-color: #bceaea;
@@ -398,7 +396,7 @@ display: none;
 .totalDiv .percentageText{
 	font-size: 15px;
 }
-.tableDiv{
+.tableDiv,#cerdit-card .activity-Table table>tr>td{
 	position: relative;
 }
 .tableDiv .menuDiv{
@@ -721,9 +719,6 @@ display: none;
 .change-date-div .table-div-activity .table>thead>tr>th:nth-child(2),.change-date-div .table-div-activity .table>thead>tr>th:nth-child(4),.change-date-div .table-div-activity .table>thead>tr>th:nth-child(5){
 	width: 17%;
 }
-/*.change-date-div .table-div-activity .table>thead>tr>th{
-	padding: 0px 8px !important;
-}*/
 .change-date-div .table-div-activity .table>tbody>tr>td{
 	text-align: center;
 }
@@ -1053,7 +1048,7 @@ display: none;
 #cerdit-card .row-click-employee-data,.row-click-application-data{
 	display: none;
 }
-#cerdit-card .row-click-employee-data p:nth-child(1),#cerdit-card .row-click-application-data p:nth-child(1){
+.backIconText{
 	font-size: 21px;
     padding: 10px 0px;
     color: #224c5b;
@@ -1128,8 +1123,41 @@ display: none;
     top: 17px;
     display: none;
 }
+.infoIcon{
+	font-size: 10px;
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    color: gray;
+    cursor: pointer;
+}
+.selectMonth{
+	display: none;
+}
 /************** Media-Query ************/
 @media only screen and (max-width: 1200px) {
+	#cerdit-card .calender-Box{
+		top: 80%;
+	    left: 24%;
+	    max-width: 70%;
+	}
+	#cerdit-card .activity-Table .triangle{
+		top: 76px;
+	}
+	#cerdit-card .multiple-select{
+		max-width: 80%;
+	}
+	#manager,#cerdit-card{
+		padding: 12px 50px;
+	}
+	#manager .calender-Div{
+		max-width: 100%;
+	}
+	#manager .calender-Box {
+	    max-width: 100%;
+	    top: 81%;
+	    left: 93%;
+	}
 	#manager .introDiv .img-div{
 		padding-left: 0px !important;
 		text-align: left !important;
@@ -1142,51 +1170,98 @@ display: none;
 		margin-left: 0px;
 		font-size: 13px;
 	}
-.main_header {
-    position: fixed;
-    top: 0;
-  }
-#main .maincontent .mainContent {
-    margin-top: 112px;
+	.main_header {
+	    position: fixed;
+	    top: 0;
+	  }
+	#main .maincontent .mainContent {
+	    margin-top: 112px;
+	}
+	#main .maincontent #card .tabs-content {
+	    padding: 30px 20px;
+	}
+	#main .maincontent #card .tabs-content .create-new-activity {
+	    text-align: right;
+	}
+	#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
+		max-width: 90%;
+	}
+	#manager .table-div-activity,#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
+		max-width: 100%;
+	}
 }
-#main .maincontent #card .tabs-content {
-    padding: 30px 20px;
-}
-#main .maincontent #card .tabs-content .create-new-activity {
-    text-align: right;
-}
-#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
-	max-width: 90%;
-}
-#manager .table-div-activity,#main .maincontent #card .tabs-content .assignActivityDiv .tableDiv{
-	max-width: 100%;
-}
-}
-
 @media only screen and (max-width: 992px) {
-	#manager{
+	.row-click-application-data .calender-Box{
+		left: initial !important;
+		right: 5% !important;
+		max-width: 40% !important;
+	}
+	#cerdit-card .calender-Box{
+		left: 16%;
+	}
+	#manager,#cerdit-card{
 		padding: 40px;
 	}
 	#main .maincontent .mainContent{
 		margin-top: 70px;
 	}
-.sideNav .siteName h4 {
-    font-size: 25px;
+	.sideNav .siteName h4 {
+	    font-size: 25px;
 	}
-.main_header p {
-    padding: 27px;
-    font-size: 15px;
+	.main_header p {
+	    padding: 27px;
+	    font-size: 15px;
 	}
-.main_header .loginText {
-    padding: 27px;
-    text-align: right;
-    font-size: 15px;
+	.main_header .loginText {
+	    padding: 27px;
+	    text-align: right;
+	    font-size: 15px;
 	}
 	.loginText{
 		display: none;
 	}
+	#cerdit-card .multiple-select{
+		max-width: 100%;
+	}
 }
 @media only screen and (max-width: 768px) {
+	#cerdit-card .calender-Box{
+		left: 26%;
+	}
+	#cerdit-card .activity-Table .triangle {
+	    top: 36px;
+	}
+	#main .sideNav{
+		width: 70px;
+	}
+	.sideNav .siteName{
+		padding: 0px 12px;
+	}
+	.sideNav .siteName h4{
+		font-size: 15px;
+		padding: 28px 0px;
+	}
+	#manager .introDiv h4{
+		margin-top: 0px !important;
+	}
+	#main .sideNav .nav-tabs>li a{
+		font-size: 30px;
+	}
+	#main .maincontent{
+		width: calc(100% - 70px);
+	    margin-left: 70px;
+	}
+	.main_header{
+		width: calc(100% - 70px);
+	}
+	#manager .calender-Box {
+	    max-width: 50%;
+	    top: 70%;
+	    left: 46%;
+	}
+	#manager .calender-Box .form-Div{
+		margin-bottom: 15px;
+	}
 	.table-div-activity table thead>tr>th{
 		padding: 15px 20px !important;
 	}
@@ -1215,19 +1290,38 @@ display: none;
 	#manager .introDiv h4{
 		margin-top: 40px;
 	}
-.main_header p,.main_header .loginText {
-    padding: 27px 0px;
-    font-size: 15px;
-}
-.table-responsive{
-	margin-bottom: 0px;
-}
-#manager .table-performance-overview{
-	max-width: 100% !important;
-}
+	.main_header p,.main_header .loginText {
+	    padding: 27px 0px;
+	    font-size: 15px;
+	}
+	.table-responsive{
+		margin-bottom: 0px;
+	}
+	#cerdit-card .row-click-employee-data .all-notes-div .table-div,#manager .table-performance-overview,#cerdit-card .row-click-application-data .all-notes-div .table-div{
+		max-width: 100% !important;
+	}
 }
 @media only screen and (max-width: 560px) {
-
+	.row-click-application-data .calender-Box{
+		max-width: 90% !important;
+	}
+	.infoIcon{
+		top: 1px;
+		right: 1px;
+	}
+	#cerdit-card .calender-Box{
+		left: 6%;
+		min-width: initial;
+		max-width: 87%;
+	}
+	#manager .calender-Box {
+	    max-width: 90%;
+	    top: 73%;
+	    left: 4%;
+	}
+	#manager .calender-Box .form-Div{
+		margin-bottom: 15px;
+	}
 	#main .maincontent #card .tabs-content #activity p{
 		margin-bottom: 20px;
 	}

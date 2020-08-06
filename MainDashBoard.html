@@ -46,8 +46,50 @@
                               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <h4>Hi Harold,</h4>
                                 <div class="dateSelect">
-                                  <label>Select Date Range</label>
-                                  <input type="date" name="date" class="dateInput">
+                                  <label class="w-100">Select Date Range:</label>
+                                  <div class="calender-Div">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <span class="managerchangeText">Today, June 28</span>
+                                    <i onclick="calenderBoxShow()" class="fa fa-caret-down" aria-hidden="true"></i>
+                                  </div>
+                                 <!--  <div class="calender-Box">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-Div">
+                                          <label>From</label>
+                                          <div class="from-Calender">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <span>06/10/20</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                          <div class="to-Div">
+                                            <label>To</label>
+                                            <div class="from-Calender">
+                                              <i for="#date-input" class="fa fa-calendar" aria-hidden="true"></i>
+                                              <span>06/10/20</span>
+                                              <input style="display: none;" id="date-input" type="date" name="to-date">
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-lg-12">
+                                        <div class="commonDiv">
+                                          <p>Today</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p class="weekText" onclick="getValue()">Week over Week</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p>Month over Month</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>      
+                                </div> -->
                                 </div>
                               </div>
                               <div class="img-div">
@@ -337,19 +379,19 @@
                      </div>
                      <div id="cerdit-card" class="tab-pane fade">
                       <div class="common-main-div">
-                        <p onclick="backScreen()" class="backIcon"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+                        <p onclick="backMainScreen()" class="backIcon"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
                         <label>Department</label>
                         <h4>Credit Card</h4>
                           <div class="multiple-select">
                             <div class="row">
-                              <div class="col-lg-6">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <label class="w-100">Display View By:</label>
                                 <select class="display-view-by">
                                   <option>Activity</option>
                                   <option>All Employee</option>
                                 </select>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <label class="w-100">Select Date Range:</label>
                                 <div class="calender-Div">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -382,7 +424,7 @@
                                           <p>Today</p>
                                         </div>
                                         <div class="commonDiv">
-                                          <p class="weekText" onclick="getValue()">Week over Week</p>
+                                          <p  class="weekText" onclick="getValue()">Week over Week</p>
                                         </div>
                                         <div class="commonDiv">
                                           <p>Month over Month</p>
@@ -392,6 +434,14 @@
                                   </div>      
                                 </div>
                               </div>
+                              <div class="selectMonth">
+                                <div class="col-lg-6 m-t-20">
+                                  <label class="w-100">Select Month:</label>
+                                  <select class="display-view-by">
+                                    <option>June 2020</option>
+                                  </select>
+                                </div>
+                              </div>
                             </div>
                           </div>
                       </div>
@@ -399,6 +449,7 @@
                           <div class="table-card-div">
                             <div class="row">
                               <div class="col-lg-12">
+                                <div class="table-responsive">
                                 <table class="table table-bordered">
                                         <thead>
                                           <tr>
@@ -589,6 +640,7 @@
                                         </tfoot>
                                         </div>
                                       </table>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -1193,6 +1245,7 @@
                           <div class="table-card-div">
                             <div class="row">
                               <div class="col-lg-12">
+                                <div class="table-responsive">
                                 <table class="table table-bordered">
                                         <thead>
                                           <tr>
@@ -1201,9 +1254,9 @@
                                             <th>Trend</th>
                                             <th colspan="2">Assigned Time</th>
                                             <th colspan="2">Achieved Time</th>
-                                            <th>High Focus (Time of Day)</th>
-                                            <th>High Focus (Duration)</th>
-                                            <th>Collective Focus Time</th>
+                                            <th style="position: relative;">High Focus (Time of Day) <span class="infoIcon"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
+                                            <th style="position: relative;">High Focus (Duration) <span class="infoIcon"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
+                                            <th style="position: relative;">Collective Focus Time <span class="infoIcon"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
                                             <th>07:00</th>
                                             <th>08:00</th>
                                             <th>09:00</th>
@@ -1370,25 +1423,68 @@
                                         </tfoot>
                                         </div>
                                       </table>
+                                    </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="row-click-employee-data">
-                          <p onclick="employeeTable()"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+                          <p class="backIconText" onclick="employeeTable()"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
                             <label>Employee</label>
                             <h4>Mary Ellen Black</h4>
                             <div class="multiple-select">
                               <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                   <label class="w-100">Display View By:</label>
                                   <select class="display-view-by">
                                     <option>Focus Area</option>
                                   </select>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                   <label class="w-100">Select Date Range:</label>
-                                  <input type="date" name="date-range">
+                                  <div class="calender-Div">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <span class="managerchangeText">Today, June 28</span>
+                                    <i onclick="calenderBoxShow()" class="fa fa-caret-down" aria-hidden="true"></i>
+                                  </div>
+                                 <!--  <div class="calender-Box">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-Div">
+                                          <label>From</label>
+                                          <div class="from-Calender">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <span>06/10/20</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                          <div class="to-Div">
+                                            <label>To</label>
+                                            <div class="from-Calender">
+                                              <i for="#date-input" class="fa fa-calendar" aria-hidden="true"></i>
+                                              <span>06/10/20</span>
+                                              <input style="display: none;" id="date-input" type="date" name="to-date">
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-lg-12">
+                                        <div class="commonDiv">
+                                          <p>Today</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p class="weekText" onclick="getValue()">Week over Week</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p>Month over Month</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>      
+                                </div> -->
                                 </div>
                               </div>
                             </div>
@@ -1404,9 +1500,9 @@
                                               <th>Trend</th>
                                               <th colspan="2">Assigned Time</th>
                                               <th colspan="2">Achieved Time</th>
-                                              <th>High Focus (Time of Day)</th>
-                                              <th>High Focus (Duration)</th>
-                                              <th>Collective Focus Time</th>
+                                              <th style="position: relative;">High Focus (Time of Day) <span class="infoIcon"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
+                                              <th style="position: relative;">High Focus (Duration) <span class="infoIcon"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
+                                              <th style="position: relative;">Collective Focus Time <span class="infoIcon"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
                                               <th>07:00</th>
                                               <th>08:00</th>
                                               <th>09:00</th>
@@ -1547,30 +1643,32 @@
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <div class="table-div">
-                                      <table class="table table-bordered">
-                                        <thead>
-                                          <tr>
-                                            <th>Date Submitted</th>
-                                            <th>Focus Area</th>
-                                            <th>Note</th>
-                                            <th>Submitted By</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>06/07/2020</td>
-                                            <td>Application Processing</td>
-                                            <td>Was below target as I was asked to support Customer Service</td>
-                                            <td>Anna Thompson</td>
-                                          </tr>
+                                      <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                          <thead>
                                             <tr>
-                                            <td>06/09/2020</td>
-                                            <td>Application Processing</td>
-                                            <td>Was below target as I was asked Anna to cover additional hours due to other staff member being on vacation.</td>
-                                            <td>Harold James</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
+                                              <th>Date Submitted</th>
+                                              <th>Focus Area</th>
+                                              <th>Note</th>
+                                              <th>Submitted By</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>06/07/2020</td>
+                                              <td>Application Processing</td>
+                                              <td>Was below target as I was asked to support Customer Service</td>
+                                              <td>Anna Thompson</td>
+                                            </tr>
+                                              <tr>
+                                              <td>06/09/2020</td>
+                                              <td>Application Processing</td>
+                                              <td>Was below target as I was asked Anna to cover additional hours due to other staff member being on vacation.</td>
+                                              <td>Harold James</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -1578,20 +1676,62 @@
                             </div>
                         </div>
                         <div class="row-click-application-data">
-                          <p onclick="applicationTable()"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+                          <p class="backIconText" onclick="applicationTable()"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
                             <label>Activity</label>
                             <h4>Application Process</h4>
                             <div class="multiple-select">
                               <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-md-6 c0l-sm-6 col-xs-12">
                                   <label class="w-100">Display View By:</label>
                                   <select class="display-view-by">
                                     <option>Focus Area</option>
                                   </select>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-md-6 c0l-sm-6 col-xs-12">
                                   <label class="w-100">Select Date Range:</label>
-                                  <input type="date" name="date-range">
+                                  <div class="calender-Div">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <span class="managerchangeText">Today, June 28</span>
+                                    <i onclick="calenderBoxShow()" class="fa fa-caret-down" aria-hidden="true"></i>
+                                  </div>
+                                 <!--  <div class="calender-Box">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-Div">
+                                          <label>From</label>
+                                          <div class="from-Calender">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <span>06/10/20</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                          <div class="to-Div">
+                                            <label>To</label>
+                                            <div class="from-Calender">
+                                              <i for="#date-input" class="fa fa-calendar" aria-hidden="true"></i>
+                                              <span>06/10/20</span>
+                                              <input style="display: none;" id="date-input" type="date" name="to-date">
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-lg-12">
+                                        <div class="commonDiv">
+                                          <p>Today</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p>Week over Week</p>
+                                        </div>
+                                        <div class="commonDiv">
+                                          <p>Month over Month</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>      
+                                </div> -->
                                 </div>
                               </div>
                             </div>
@@ -1732,30 +1872,32 @@
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <div class="table-div">
-                                      <table class="table table-bordered">
-                                        <thead>
-                                          <tr>
-                                            <th>Date Submitted</th>
-                                            <th>Focus Area</th>
-                                            <th>Note</th>
-                                            <th>Submitted By</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>06/07/2020</td>
-                                            <td>Application Processing</td>
-                                            <td>Was below target as I was asked to support Customer Service</td>
-                                            <td>Anna Thompson</td>
-                                          </tr>
+                                      <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                          <thead>
                                             <tr>
-                                            <td>06/09/2020</td>
-                                            <td>Application Processing</td>
-                                            <td>Was below target as I was asked Anna to cover additional hours due to other staff member being on vacation.</td>
-                                            <td>Harold James</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
+                                              <th>Date Submitted</th>
+                                              <th>Focus Area</th>
+                                              <th>Note</th>
+                                              <th>Submitted By</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>06/07/2020</td>
+                                              <td>Application Processing</td>
+                                              <td>Was below target as I was asked to support Customer Service</td>
+                                              <td>Anna Thompson</td>
+                                            </tr>
+                                              <tr>
+                                              <td>06/09/2020</td>
+                                              <td>Application Processing</td>
+                                              <td>Was below target as I was asked Anna to cover additional hours due to other staff member being on vacation.</td>
+                                              <td>Harold James</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -2481,13 +2623,6 @@
             $('.employee-Table').css('display','block');
           }
       });
-      function backScreen(){
-        if($('.employee-Table').css('display')==="block"){
-            $('.activity-Table').css('display','block');
-            $('.employee-Table').css('display','none');
-            $('.backIcon').css('display','none');
-        }
-      }
       function openBox(){
         if($('.open-box').css('display')=="block"){
           $('.open-box').css('display', 'none');
@@ -2535,10 +2670,23 @@
         if($('.changeText').text()==="Week over Week"){
           $('.week-by-week').css('display','block');
           $('.downArrow').css('display','block');
+          $('.backIcon').css('display','block');
+          $('.selectMonth').css('display','block');
         }
       }
-      function showWeekData(){
-        console.log("show");
+      function backMainScreen(){
+        if($('.week-by-week').css('display')==='block'){
+          $('.week-by-week').css('display','none');
+          $('.backIcon').css('display','none');
+          $('.changeText').text("Today, June 28");
+          $('.downArrow').css('display','none');
+          $('.selectMonth').css('display','none');
+        }
+        if($('.employee-Table').css('display')==="block"){
+            $('.activity-Table').css('display','block');
+            $('.employee-Table').css('display','none');
+            $('.backIcon').css('display','none');
+        }
       }
    </script>
 </html>
